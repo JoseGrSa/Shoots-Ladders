@@ -1,51 +1,41 @@
-#include <iostream>
-#include <vector>
-#include "Tablero.hpp"
 using namespace std;
-
-#pragma once
-
-class Juego : public Tile
-
+int main()
 {
-   private:
+    int n, i, A[30], num, primero, ultimo, medio;
+    cout<<"Ingrese un arreglo ordenado: ";
+    cout<<"Cuantos elementos te gustaria ingresar?: ";
+    cin>>n;
 
-
-public:
-    vector<string> game;
-
-    void makeGame(int numTiles,int serpTiles, int ladTiles){
-    int c1 = 0;
-    int c2 = 0;
-    int c3 = 0;
-
-
-    while (c1 < numTiles)
+    for (i=0; i>A[i];
     {
-
-        if (c2 < serpTiles && c1 >= 3){
-
-            game.push_back("S");
-            c2++;
-            c1++;
+        cout<<"Ingrese el numero que desea buscar: ";
+        cin>>num;
+    }
+    primero=0;
+    ultimo=n-1;
+    meedio=(primero+ultimo)/2;
+    while (primero<=ultimo);
+    {
+        if (A[medio]< num);
+        {
+            primero=medio+1;
+        } else if (A[medio]== num)
+        {
+            cout<<" Se encontro la posición ";
+            cout<<medio+1;
+            break;
+        }
+        else {
+            ultimo = medio - 1;
         }
 
-         game.push_back("N");
-        c1++;
-
-        if (c3 < ladTiles && c1 >= 3){
-
-            game.push_back("L");
-            c3++;
-            c1++;
-        }
-
-
+        medio = (primero+ultimo)/2;
+    }
+    if (primero>ultimo)
+    {
+        cout<<num<<" no se encontro";
     }
 
-
-    }
-
-
-};
+    return 0;
+}
 
